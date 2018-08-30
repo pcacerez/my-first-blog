@@ -1,5 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-
-def index(request):
-    return HttpResponse("Hola curro, como estas¿?")
+def post_list(request):
+    return render(request, 'conecta/post_list.html', {})

@@ -18,5 +18,12 @@
         <li>Tercer elemento</li>
       </ul>
     </div>
+    <div align='center'>
+        {% for post in posts %}
+        <h1><a href="">{{ post.title}}</a></h1>
+        <p>{{post.text|linebreaksbr}}</p>
+        <p>Publicado por {{post.author}}: {{post.published_date}}</p>
+        {% endfor %}
+    </div>
   </body>
 </html>

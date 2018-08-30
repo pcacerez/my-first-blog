@@ -1,0 +1,20 @@
+Un QuerySet es, en esencia, una lista de objetos de un modelo determinado.
+ Un QuerySet te permite leer los datos de una base de datos, filtrarlos y ordenarlos.
+
+CONSOLA SHELL->
+
+from blog.models import Post
+Post.objects.all()
+<QuerySet [<Post: my post title>, <Post: another post title>]>
+
+
+from django.contrib.auth.models import User
+User.objects.all()
+<QuerySet [<User: pablo>]
+me = User.objects.get(username='pablo')
+
+Post.objects.filter(author=me)
+<QuerySet [<Post: Sample title>, <Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>]>
+
+Post.objects.order_by('created_date')
+<QuerySet [<Post: Sample title>, <Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>]>

@@ -1,0 +1,56 @@
+Desde el directorio donde esta ubicado nuestro proyecto y nuestras app.
+
+git init  #iniciamos repo de git
+git config user.name "Tu nombre"
+git config user.email tú@ejemplo.com
+
+nota:
+  Inicializar el repositorio git es algo que sólo necesitamos hacer una vez por proyecto
+  (y no tendrás que volver a poner tu usuario y correo electrónico nunca más).
+
+----------------------------------------------------------------
+Git llevará un registro de los cambios realizados en todos los ficheros y carpetas en este directorio,
+pero hay algunos ficheros que queremos que ignore.
+Esto lo hacemos creando un fichero llamado .gitignore en el directorio base.
+Abre tu editor y crea un nuevo fichero con el siguiente contenido:
+
+*.pyc
+__pycache__
+myvenv
+db.sqlite3
+.DS_Store
+
+Y guárdalo como .gitignore dentro de tú directorio principal.
+
+------------------------------------------------
+
+Nos muestra una lista de los archivos y directorios donde git acuta, por lo cual
+no mostrará los mencionados en el archivo ( .gitignore ) que creamos anteriormente.
+
+git status
+
+Y finalmente guardamos nuestros cambios. Ve a la consola y ejecuta estos comandos:
+
+git add --all
+git commit -m "Mi app Django Girls, primer commit"
+
+Creando nuestro primer REPOSITORY:
+
+      Nota El nombre my-first-blog es importante. Podrías elegir otra cosa,
+      pero va a aparecer muchas veces en las instrucciones que siguen y tendrías
+      que sustituirlo cada vez. Probablemente sea más sencillo quedarte con el
+      nombre my-first-blog.
+
+      www.github.com
+
+      (Deja desmarcada la opción "Initialise with a README", deja la opción .gitignore
+      en blanco (lo hemos hecho a mano) y deja la licencia como "None".
+
+      Copitamos la dirección en el segúndo paso.
+
+      https://github.com/pcacerez/my-first-blog.git
+
+      Ahora tenemos que conectar el repositorio Git de tu ordenador con el que está en GitHub.
+
+      git remote add origin https://github.com/pcacerez/my-first-blog.git
+      git push -u origin master

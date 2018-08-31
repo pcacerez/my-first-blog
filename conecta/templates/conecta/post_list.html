@@ -1,29 +1,15 @@
-<html>
-  <head>
-    <title>Conect@</title>
-  </head>
-  <body>
-    <div align='center'>
-      <h1>Titulo H1</h1>
-    </div><div align='right'>
-      <h2>Subtitulo H2</h2>
-    </div><div align='center'>
-      <b>Esto es un texto de prueba en negrita</b>
-    </div><div align='center'>
-      <p><a href="http://conectafs.pythonanywhere.com/">Página conecta en Servidor pythonanywhere</a></p>
-    </div><div>
-      <ul><b><u>Esto es una lista</u></b>
-        <li>Primero elemento</li>
-        <li>Segúndo elemento</li>
-        <li>Tercer elemento</li>
-      </ul>
+{% extends 'conecta/base.html' %}
+
+{% block content %}
+
+  {% for post in posts %}
+    <div class="post">
+      <div class="date">
+        {{ post.published_date }}
+      </div>
+      <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
     </div>
-    <div align='center'>
-        {% for post in posts %}
-        <h1><a href="">{{ post.title}}</a></h1>
-        <p>{{post.text|linebreaksbr}}</p>
-        <p>Publicado por {{post.author}}: {{post.published_date}}</p>
-        {% endfor %}
-    </div>
-  </body>
-</html>
+  {% endfor %}
+
+{% endblock %}

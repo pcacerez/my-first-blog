@@ -1,13 +1,13 @@
 from django.conf.urls import url#Importamos metodos django:
-from .import views
+from .views import viewPost
 
 urlpatterns = [
-    url(r'^$', views.post_list, name='post_list'),
-    url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),
-    url(r'^post/new/$', views.post_new, name='post_new'),
-    url(r'^post/(?P<pk>[0-9]+)/edit/$', views.post_edit, name='post_edit'),
+    # post=>
+    url(r'^$', viewPost.post_list, name='post_list'),
+    url(r'^post/(?P<pk>[0-9]+)/$', viewPost.post_detail, name='post_detail'),
+    url(r'^post/new/$', viewPost.post_new, name='post_new'),
+    url(r'^post/(?P<pk>[0-9]+)/edit/$', viewPost.post_edit, name='post_edit'),
 ]
-
 # post/ = Significa que después del comienzo, la dirección URL debe contener la palabra post y /
 # (?P<pk>[0-9]+) = Significa que Django llevará todo lo que coloques aquí y lo transferirá
 # a una vista como una variable llamada pk. [0-9]

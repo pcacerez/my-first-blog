@@ -1,0 +1,7 @@
+{% extends 'layout.html'%}
+{% block layout %}
+Esto es una simple prueba, realizamos un enlace para postlist:
+<h1><a href="{% url 'post_list'%}">Posts</a></h1>
+<h1><a href="{% url 'user_list'%}">Usuarios</a></h1>
+
+{% endblock %}

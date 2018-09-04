@@ -1,0 +1,23 @@
+.content {
+  margin-left: 60px;
+}
+.date {
+  margin-left: 20px;
+  color: blue;
+}
+.save {
+  float: right;
+}
+.post {
+  margin-bottom: 20px;
+}
+.post-form textarea, .post-form input {
+  width: 25%;
+}
+.post h1 a, .post h1 a:visited {
+  color: #000000;
+}
+.ancho{
+  width: 75%;
+  margin-left: 20px;
+}

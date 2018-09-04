@@ -1,0 +1,11 @@
+{% extends 'user/userLayout.html' %}
+{% block userLayout %}
+  <div class="post">
+    <h1><center>Usuario: {{ user.username }}</center></h1>
+    <h4>{{ user.first_name }}</h4>
+    <h4>{{ user.last_name }}</h4>
+    <h4>{{ user.email }}</h4>
+    <a class="btn btn-success btn-xs" href="{% url 'user_edit' pk=user.pk %}">
+    <span class="btn btn-edit glyphicon glyphicon-pencil"></span></a>
+  </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+  {% load staticfiles %}
+  <head>
+    <link rel="stylesheet" href="{% static 'css/postLayout' %}">
+  </hedad>
+{% block layout %}
+<div class="content container">
+    <div class="row">
+        <div class="col-md-6" align="left">
+          {% block postLayout %}
+          {% endblock %}
+        </div>
+        <div class="col-md-4" align="center" style="background-color:orange;">
+          <a href="{% url 'post_new' %}" class="top-menu">Añadir Post <span class="glyphicon glyphicon-plus"></span></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

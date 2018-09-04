@@ -1,6 +1,8 @@
-{% extends 'post/postLayout.html' %}
-{% block postLayout %}
-   <h1>New post</h1>
+{% extends 'user/userLayout.html' %}
+{% block userLayout %}
+  {% if new == 1 %}
+   <h1>Nuevo_Usuario</h1>
+  {% endif %}
    <form method="POST" class="post-form">{% csrf_token %}
      {{form.as_p}}
      <button type="submit" class="save btn btn-default">Save</button>

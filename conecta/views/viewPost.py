@@ -1,8 +1,8 @@
 from django.shortcuts import get_object_or_404, render
 from django.shortcuts import redirect
 from django.utils import timezone # Utilizaremos published_date__lte
-from ..forms import PostForm
-from ..models.modelPost import Post
+from conecta.forms import PostForm
+from conecta.models.modelPost import Post
 
 #.models = el punto indica que estamos en el directorio mimso que realizamos la llamada, en este caso llamos a
 # models desde views.

@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.shortcuts import redirect
-from ..forms import UserForm
 from django.contrib.auth.models import User
+from conecta.forms import UserForm
 
 #.models = el punto indica que estamos en el directorio mimso que realizamos la llamada, en este caso llamos a
 # models desde views.

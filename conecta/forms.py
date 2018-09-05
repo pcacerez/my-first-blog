@@ -15,4 +15,4 @@ class UserForm(forms.ModelForm):
 #Decimos a Django qué modelo debe utilizar para crear este formulario (model = Post).Configuramos nuestro tipo de formulario...
     class Meta:
         model = User
-        fields = ('username','first_name', 'last_name','email')
+        fields = ('username','first_name', 'last_name','email','password')

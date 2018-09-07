@@ -21,7 +21,6 @@ def user_new(request):
             #guardamos el formulario con form.save
             user = form.save(commit=False)
             #añadimos el autor
-            #post.author = request.user
             #Lo publicamos, opcional.
             user.save()
             return redirect('user_detail' , pk=user.pk)

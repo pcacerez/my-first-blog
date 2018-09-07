@@ -1,7 +1,11 @@
 {% extends 'layout.html'%}
 {% block layout %}
-    <h1><a href="{% url 'post_list'%}">Posts</a></h1>
-    <h1><a href="{% url 'user_list'%}">Usuarios</a></h1>
-    <h1><a href="{% url 'prueba'%}">Prueba</a></h1>
-    <h1><a href="{% url 'user_login'%}">Login</a></h1>
+    {% if request.user.pk != none %}
+      <h1><a href="{% url 'post_list'%}">Posts</a></h1>
+      <h1><a href="{% url 'user_list'%}">Usuarios</a></h1>
+      <h1><a href="{% url 'prueba'%}">Prueba</a></h1>
+      <h1><a href="{% url 'user_logout'%}">Logout</a></h1>
+    {% else %}
+      <h1><a href="{% url 'user_login'%}">Login</a></h1>
+    {% endif %}
 {% endblock %}
